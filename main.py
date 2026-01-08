@@ -2,12 +2,31 @@
 #Juego de aventura: Haunted Mansion
 #Version: 1.0
 
+#Se agrega soporte para pausas y limpieza de pantalla en la terminal
+import time 
+import os 
+
+#Importacion de sprites (Por el momento no hay ninguno)
+from sprites import *
+
+#Esto para poder limpiar la terminal
+def limpiar():
+    print("\n" * 100)
+
+#Inicio del juego 
+(limpiar)
+print("CARGANDO JUEGO...")
+time.sleep(1)
+(limpiar)
+
 print("-------------------------------------")
 print("  Bienvenido a Haunted Mansion V1.0  ")
 print("-------------------------------------")
 
 #Se solicita nombre al jugador
 nombre_jugador = input("Por favor, ingresa tu nombre: ")
+
+(limpiar)
 
 print("Hola " + nombre_jugador + ". Estas parado frente a una puerta gigante y vieja.")
 print("Se escuchan ruidos extraños dentro...")
@@ -80,9 +99,4 @@ if desicion1 == "si":
 
         else: 
             #Por el momento no pasa nada si no se escoge ninguna puerta
-
-
-
-
-
-
+            print("Te quedaste en el pasillo sin hacer nada y te desmayaste...")
