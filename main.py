@@ -25,6 +25,8 @@ if desicion1 == "si":
     print("A la derecha hay unas ESCALERAS que suben.")
 
     #Segunda desicion
+    print("--------------------------------------")
+    print("Se escuchan ruidos extraños provenientes de la cocina.")
     direccion = input("A donde quieres ir? (Escribe 'COCINA' o 'ESCALERAS'):").lower()
 
     if direccion == "cocina":
@@ -52,8 +54,35 @@ if desicion1 == "si":
         else: 
             print("Te quedaste en la cocina sin hacer nada y los ruidos te alcanzaron...")
             print("FIN DEL JUEGO.")
-
-
             
+    elif direccion == "escaleras":
+        #Si el usuario escoge las escaleras
+        print("--------------------------------------")
+        print("Subes las escaleras lentamente.")
+        print("En el segundo piso, ves un pasillo con dos puertas, una roja y otra verde")
+        print("De repente, escuchas pasos acercandose...")
+        print("Tienes que decidir rapido!")
+
+        #Tercera desicion (Dentro de las escaleras)
+        accion_escaleras = input("Que puerta eliges? Roja / Verde:").lower()
+
+        if accion_escaleras == "roja":
+            #ESTADO MEDIO
+            print("--------------------------------------")
+            print("Abres la puerta roja y entras a una habitacion un poco iluminada.")
+            print("Dentro ves un espejo antiguo y una ventana que da al exterior.")
+
+        elif accion_escaleras == "verde":
+            #ESTADO MEDIO (Dentro de la habitacion verde)
+            print("--------------------------------------")
+            print("Abres la puerta verde y entras a una habitacion oscura.")
+            print("De repente, se iluminan las luces del baño")
+
+        else: 
+            #Por el momento no pasa nada si no se escoge ninguna puerta
+
+
+
+
 
 
